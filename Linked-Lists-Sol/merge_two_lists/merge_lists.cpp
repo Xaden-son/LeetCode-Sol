@@ -12,12 +12,27 @@ class Solution
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) 
     {
-        if (list1 == nullptr)
-            return (list2);
-        else if (list2 == nullptr)
-            return (list1);
+		ListNode* curr1, *curr2, *temp;
 
-        ListNode dummy(0);
-        ListNode* tail = &dummy;
+		curr1 = list1;
+		curr2 = list2;
+		while (curr1 != nullptr && curr2 != nullptr)
+		{
+			temp = curr1 -> next;
+			if (curr1 -> val < curr2 -> val || curr1 -> val == curr2 -> val)
+			{
+				curr1 -> next = curr2;
+				curr1 = curr1 -> next;
+				curr2 = curr2 -> next;
+			}else if (curr2 -> val < curr1 -> val || curr2 -> val == curr1 -> val)
+			{
+				curr2 -> next = curr1;
+				curr2 = curr2 -> next;
+				curr1 = curr1 -> next;
+			}
+			curr1 -> next = temp;
+		}
+
+		return (curr1);
     }
 };
