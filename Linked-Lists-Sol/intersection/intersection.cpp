@@ -1,6 +1,3 @@
-#include <iostream>
-using namespace std;
-
 struct ListNode
 {
      int val;
@@ -53,7 +50,6 @@ public:
 			currA = currA -> next;
 			currB = currB -> next;
 		}
-		
 		return (currA);
     }
 };

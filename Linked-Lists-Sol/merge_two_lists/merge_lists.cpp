@@ -1,6 +1,3 @@
-#include <iostream>
-using namespace std;
-
 struct ListNode
 {
      int val;
@@ -22,7 +19,5 @@ public:
 
         ListNode dummy(0);
         ListNode* tail = &dummy;
-
-
     }
 };
