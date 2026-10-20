@@ -1,7 +1,3 @@
-//#include <iostream>
-//using namespace std;
-
-/*
 struct ListNode 
 {
      int val;
@@ -10,7 +6,6 @@ struct ListNode
      ListNode(int x) : val(x), next(nullptr) {}
      ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
-*/
 
 // Uploaded this block.
 class Solution 
@@ -32,6 +27,9 @@ public:
         return (head);
     }
 };
+
+//#include <iostream>
+//using namespace std;
 /*
 void    printList(ListNode* head)
 {
