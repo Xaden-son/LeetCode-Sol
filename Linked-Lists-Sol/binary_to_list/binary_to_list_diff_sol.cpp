@@ -13,18 +13,11 @@ public:
     int getDecimalValue(ListNode* head) 
     {
 		ListNode* curr;
-		int num, i, size;
+		int num, i;
 
-        size = 0;
-		curr = head;
-		while (curr != nullptr)
-		{
-			curr = curr -> next;
-			size++;
-		}
 		num = 0;
 		curr = head;
-		for (i = 0; i < size; i++)
+		for (i = 0; curr != nullptr; i++)
 		{
 			num = 2 * num + curr -> val;
 			curr = curr -> next; 
